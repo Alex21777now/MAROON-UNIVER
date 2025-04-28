@@ -13,7 +13,9 @@
   <?php  require "blocks/header.php" ?>
   
   <div class="container mt-5">
-    <h3 class="mb-5">Программы тренировок в зале для начинающих и более опытных спортсменов</h3>
+  <img src="img/Shwartc2.jpg" class="img-fluid mx-auto d-block" alt="Центрированная картинка" style="max-width: 350px;">
+    <br/>
+  <h3 class="mb-5">Программы тренировок в зале для начинающих и более опытных спортсменов</h3>
 
     <div class="d-flex flex-wrap">
     <?php
