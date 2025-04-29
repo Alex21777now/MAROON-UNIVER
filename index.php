@@ -38,6 +38,45 @@
     </div>
   <?php endfor; ?>
   </div>
+  <?php
+// Функция для получения фильмов с API
+function fetchMovies() {
+    $apiKey = "4e5548c37fdfda0975c70c0688c24955";
+    $url = "https://api.themoviedb.org/3/discover/movie?api_key=$apiKey";
+
+    $response = file_get_contents($url);
+    if ($response === FALSE) {
+        return [];
+    }
+
+    $data = json_decode($response, true);
+    return $data['results'] ?? [];
+}
+
+$movies = fetchMovies();
+
+// Узнаем, сколько фильмов показывать
+$visibleMovies = isset($_GET['visible']) ? intval($_GET['visible']) : 10;
+if ($visibleMovies > count($movies)) {
+    $visibleMovies = count($movies);
+}
+?>
+
+
+  <h1>Movie List</h1>
+
+<ul>
+    <?php for ($i = 0; $i < $visibleMovies; $i++): ?>
+        <li><?php echo htmlspecialchars($movies[$i]['title']); ?></li>
+    <?php endfor; ?>
+</ul>
+
+<?php if ($visibleMovies < count($movies)): ?>
+    <form method="get">
+        <input type="hidden" name="visible" value="<?php echo $visibleMovies + 5; ?>">
+        <button type="submit">Load More</button>
+    </form>
+<?php endif; ?>
   </div>
   
   <?php  require "blocks/footer.php" ?>
