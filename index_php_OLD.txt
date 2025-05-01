@@ -9,12 +9,66 @@
   <title>UNIVER.TEHNON.com.ua</title>
   <style>
         body {
-            
+            font-family: Arial, sans-serif;
             background: linear-gradient(to right, #4682B4, #00f2fe); /* Синий-фиолетовый градиент */
             color: maroon;
-            
+            padding: 20px;
+            min-height: 100vh;
         }
-  </style>
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h3 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        li {
+            background-color: rgba(255, 255, 255, 0.1);
+            margin-bottom: 10px;
+            padding: 15px 20px;
+            border-radius: 10px;
+            font-size: 18px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.5s forwards;
+        }
+        li:nth-child(odd) {
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+        button {
+            padding: 12px 25px;
+            background-color: #ffffff;
+            color: #2575fc;
+            border: none;
+            cursor: pointer;
+            margin: 30px auto 0;
+            display: block;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: background-color 0.3s, color 0.3s;
+        }
+        button:hover {
+            background-color: #2575fc;
+            color: #ffffff;
+        }
+
+        /* Анимация появления */
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 <body>
   <?php  require "blocks/header.php" ?>
@@ -62,19 +116,22 @@ function fetchMovies() {
 
 $movies = fetchMovies();
 
-// Узнаем, сколько фильмов показывать
+// Сколько фильмов показывать
 $visibleMovies = isset($_GET['visible']) ? intval($_GET['visible']) : 10;
 if ($visibleMovies > count($movies)) {
     $visibleMovies = count($movies);
 }
 ?>
-
-
-  <h1>Movie List</h1>
+<br/>
+<h3>In the evening get familiar with newly released Movies coming soon</h3>
+<br/>
+<h1>Movie List</h1>
 
 <ul>
     <?php for ($i = 0; $i < $visibleMovies; $i++): ?>
-        <li><?php echo htmlspecialchars($movies[$i]['title']); ?></li>
+        <li style="animation-delay: <?php echo $i * 0.1; ?>s;">
+            <?php echo htmlspecialchars($movies[$i]['title']); ?>
+        </li>
     <?php endfor; ?>
 </ul>
 
