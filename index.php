@@ -25,25 +25,110 @@
   <h3 class="mb-5">Программы тренировок в зале для начинающих и более опытных спортсменов</h3>
 
     <div class="d-flex flex-wrap">
-    <?php
-        for($i = 0; $i < 6; $i++):
-    ?>
+      <?php
+      //  for($i = 0; $i < 6; $i++):
+    ?> 
+
+
     <div class="card mb-4 shadow-sm">
       <div class="card-header">
-        <h4 class="my-0 font-weight-normal">Просто текст</h4>
+        <h4 class="my-0 font-weight-normal">Общая  #1</h4>
       </div>
       <div class="card-body">
-        <img src="img/priroda_<?php echo ($i + 1) ?>.jpg" class="img-thumbnail">
+        <img src="img/priroda_1.jpg" class="img-thumbnail">
         <ul class="list-unstyled mt-3 mb-4">
-          <li>10 users included</li>
-          <li>2 GB of storage</li>
-          <li>Email support</li>
-          <li>Help center access</li>
+          <li>Жим штанги лежа</li>
+          <li>Жим гантелей вверх</li>
+          <li>Тяга штанги</li>
+          <li>Подъем гантелей</li>
         </ul>
         <button type="button" class="btn btn-lg btn-block btn-outline-primary">Подробнее</button>
       </div>
     </div>
-  <?php endfor; ?>
+    
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Общая  #2</h4>
+      </div>
+      <div class="card-body">
+        <img src="img/priroda_2.jpg" class="img-thumbnail">
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>Жим штанги на накл</li>
+          <li>Подъемы гантелей</li>
+          <li>Подтягивания широким</li>
+          <li>Подъем штанги</li>
+        </ul>
+        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Подробнее</button>
+      </div>
+    </div>
+
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Общая  #3</h4>
+      </div>
+      <div class="card-body">
+        <img src="img/priroda_3.jpg" class="img-thumbnail">
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>Жим штанги на накл</li>
+          <li>Тяга штанги</li>
+          <li>Подтягивания</li>
+          <li>Тяга нижнего блока</li>
+        </ul>
+        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Подробнее</button>
+      </div>
+    </div>
+
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Плечи руки</h4>
+      </div>
+      <div class="card-body">
+        <img src="img/priroda_4.jpg" class="img-thumbnail">
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>Тяга штанги</li>
+          <li>Жим гантелей</li>
+          <li>Подъемы гантелей</li>
+          <li>Подтягивания</li>
+        </ul>
+        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Подробнее</button>
+      </div>
+    </div>
+
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Грудь спина</h4>
+      </div>
+      <div class="card-body">
+        <img src="img/priroda_5.jpg" class="img-thumbnail">
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>Жим штанги лежа</li>
+          <li>Жим штанги накл</li>
+          <li>Отжимания</li>
+          <li>Тяга блока</li>
+        </ul>
+        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Подробнее</button>
+      </div>
+    </div>
+
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Ноги низ</h4>
+      </div>
+      <div class="card-body">
+        <img src="img/priroda_6.jpg" class="img-thumbnail">
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>Приседания</li>
+          <li>Мертвая тяга</li>
+          <li>Подъемы</li>
+          <li>Жим штанги</li>
+        </ul>
+        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Подробнее</button>
+      </div>
+    </div>
+
+    <?php
+  //  endfor; 
+   ?>
   </div>
   <?php
 // Функция для получения фильмов с API
