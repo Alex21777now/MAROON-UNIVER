@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <title>UNIVER.TEHNON.com.ua</title>
+  <link rel="icon" type="image/png" href="green-uicon.png">
   <style>
         body {
             
@@ -16,7 +17,7 @@
         }
 
          /* Модальное окно */
-    #modal {
+    #modal,#modal2,#modal3,#modal4,#modal5,#modal6 {
       display: none;
       position: fixed;
       z-index: 999;
@@ -39,17 +40,17 @@
       position: relative;
     }
 
-    #modal h3 {
+    #modal h3,#modal2 h3,#modal3 h3,#modal4 h3,#modal5 h3,#modal6 h3 {
       color: #004080;
       text-align: center;
     }
 
-    #modal ul {
+    #modal ul,#modal2 ul,#modal3 ul,#modal4 ul,#modal5 ul,#modal6 ul {
       padding-left: 20px;
       margin-top: 15px;
     }
 
-    #modal li {
+    #modal li,#modal2 li,#modal3 li,#modal4 li,#modal5 li,#modal6 li {
       margin-bottom: 10px;
     }
 
@@ -175,33 +176,17 @@ $f = [
           <li>Тяга штанги</li>
           <li>Подъем гантелей</li>
         </ul>
-        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Подробнее</button>
-      </div>
-    </div>
-    
-    <div class="card mb-4 shadow-sm">
-      <div class="card-header">
-        <h4 class="my-0 font-weight-normal">Общая  #2</h4>
-      </div>
-      <div class="card-body">
-        <img src="img/priroda_2.jpg" class="img-thumbnail">
-        <ul class="list-unstyled mt-3 mb-4">
-          <li>Жим штанги на накл</li>
-          <li>Подъемы гантелей</li>
-          <li>Подтягивания широким</li>
-          <li>Подъем штанги</li>
-        </ul>
         <button type="button" class="btn btn-lg btn-block btn-outline-primary" onclick="openModal()">Подробнее</button>
       </div>
     </div>
-
+    
     <div id="modal">
     <div id="modalContent">
       <button class="closeBtn" onclick="closeModal()">×</button>
       </br>
-      <h3>Программа #Общая 2  отдых 2–3 мин</h3>
+      <h3>Программа #Общая 1  отдых 2–3 мин</h3>
       <ul>
-        <?php foreach ($b as $item): ?>
+        <?php foreach ($a as $item): ?>
           <li><?= htmlspecialchars($item) ?></li>
         <?php endforeach; ?>
       </ul>
@@ -222,6 +207,47 @@ $f = [
 
     <div class="card mb-4 shadow-sm">
       <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Общая  #2</h4>
+      </div>
+      <div class="card-body">
+        <img src="img/priroda_2.jpg" class="img-thumbnail">
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>Жим штанги на накл</li>
+          <li>Подъемы гантелей</li>
+          <li>Подтягивания широким</li>
+          <li>Подъем штанги</li>
+        </ul>
+        <button type="button" class="btn btn-lg btn-block btn-outline-primary" onclick="openModal2()">Подробнее</button>
+      </div>
+    </div>
+
+    <div id="modal2">
+    <div id="modalContent">
+      <button class="closeBtn" onclick="closeModal2()">×</button>
+      </br>
+      <h3>Программа #Общая 2  отдых 2–3 мин</h3>
+      <ul>
+        <?php foreach ($b as $item): ?>
+          <li><?= htmlspecialchars($item) ?></li>
+        <?php endforeach; ?>
+      </ul>
+      <button class="closeBottom" onclick="closeModal2()">Close</button>
+    </div>
+  </div>
+
+  <script>
+    function openModal2() {
+      document.getElementById("modal2").style.display = "block";
+    }
+
+    function closeModal2() {
+      document.getElementById("modal2").style.display = "none";
+    }
+  </script>
+
+
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
         <h4 class="my-0 font-weight-normal">Общая  #3</h4>
       </div>
       <div class="card-body">
@@ -232,9 +258,33 @@ $f = [
           <li>Подтягивания</li>
           <li>Тяга нижнего блока</li>
         </ul>
-        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Подробнее</button>
+        <button type="button" class="btn btn-lg btn-block btn-outline-primary" onclick="openModal3()">Подробнее</button>
       </div>
     </div>
+
+    <div id="modal3">
+    <div id="modalContent">
+      <button class="closeBtn" onclick="closeModal3()">×</button>
+      </br>
+      <h3>Программа #Общая 3  отдых 2–3 мин</h3>
+      <ul>
+        <?php foreach ($c as $item): ?>
+          <li><?= htmlspecialchars($item) ?></li>
+        <?php endforeach; ?>
+      </ul>
+      <button class="closeBottom" onclick="closeModal3()">Close</button>
+    </div>
+  </div>
+
+  <script>
+    function openModal3() {
+      document.getElementById("modal3").style.display = "block";
+    }
+
+    function closeModal3() {
+      document.getElementById("modal3").style.display = "none";
+    }
+  </script>
 
     <div class="card mb-4 shadow-sm">
       <div class="card-header">
@@ -248,9 +298,34 @@ $f = [
           <li>Подъемы гантелей</li>
           <li>Подтягивания</li>
         </ul>
-        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Подробнее</button>
+        <button type="button" class="btn btn-lg btn-block btn-outline-primary" onclick="openModal4()">Подробнее</button>
       </div>
     </div>
+
+    <div id="modal4">
+    <div id="modalContent">
+      <button class="closeBtn" onclick="closeModal4()">×</button>
+      </br>
+      <h3>Программа #Плечи-руки  отдых 2–3 мин</h3>
+      <ul>
+        <?php foreach ($d as $item): ?>
+          <li><?= htmlspecialchars($item) ?></li>
+        <?php endforeach; ?>
+      </ul>
+      <button class="closeBottom" onclick="closeModal4()">Close</button>
+    </div>
+  </div>
+
+  <script>
+    function openModal4() {
+      document.getElementById("modal4").style.display = "block";
+    }
+
+    function closeModal4() {
+      document.getElementById("modal4").style.display = "none";
+    }
+  </script>
+
 
     <div class="card mb-4 shadow-sm">
       <div class="card-header">
@@ -264,9 +339,33 @@ $f = [
           <li>Отжимания</li>
           <li>Тяга блока</li>
         </ul>
-        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Подробнее</button>
+        <button type="button" class="btn btn-lg btn-block btn-outline-primary" onclick="openModal5()">Подробнее</button>
       </div>
     </div>
+
+    <div id="modal5">
+    <div id="modalContent">
+      <button class="closeBtn" onclick="closeModal5()">×</button>
+      </br>
+      <h3>Программа #Грудь-спина  отдых 2–3 мин</h3>
+      <ul>
+        <?php foreach ($e as $item): ?>
+          <li><?= htmlspecialchars($item) ?></li>
+        <?php endforeach; ?>
+      </ul>
+      <button class="closeBottom" onclick="closeModal5()">Close</button>
+    </div>
+  </div>
+
+  <script>
+    function openModal5() {
+      document.getElementById("modal5").style.display = "block";
+    }
+
+    function closeModal5() {
+      document.getElementById("modal5").style.display = "none";
+    }
+  </script>
 
     <div class="card mb-4 shadow-sm">
       <div class="card-header">
@@ -280,9 +379,33 @@ $f = [
           <li>Подъемы</li>
           <li>Жим штанги</li>
         </ul>
-        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Подробнее</button>
+        <button type="button" class="btn btn-lg btn-block btn-outline-primary" onclick="openModal6()">Подробнее</button>
       </div>
     </div>
+
+    <div id="modal6">
+    <div id="modalContent">
+      <button class="closeBtn" onclick="closeModal6()">×</button>
+      </br>
+      <h3>Программа #Ноги-низ  отдых 2–3 мин</h3>
+      <ul>
+        <?php foreach ($f as $item): ?>
+          <li><?= htmlspecialchars($item) ?></li>
+        <?php endforeach; ?>
+      </ul>
+      <button class="closeBottom" onclick="closeModal6()">Close</button>
+    </div>
+  </div>
+
+  <script>
+    function openModal6() {
+      document.getElementById("modal6").style.display = "block";
+    }
+
+    function closeModal6() {
+      document.getElementById("modal6").style.display = "none";
+    }
+  </script>
 
     <?php
   //  endfor; 
